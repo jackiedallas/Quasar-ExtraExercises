@@ -34,8 +34,19 @@ minMax([37, 3, 56, 4, 754, 92, 29])
  * Numbers in the array should not repeat.
  * The original order must be maintained.
  */
-function
-
+function filterArray(input) {
+	var result = [];
+	if (Array.isArray(input)){
+		input.forEach(function (element) {
+			if(!isNaN(element)){
+				result.push(element);
+			}
+		})
+	}
+	console.log(result);
+}
+filterArray(['dog', 2, 'toy', 1, 45])
+filterArray([1, 2, "aasf", "1", "123", 123, 0, 1])
 /**
  * Is the Average of All Elements a Whole Number?
  * Create a function named isAvgWhole that takes an array as an argument and returns true or false depending on whether the average of all elements in the array is a whole number or not.
