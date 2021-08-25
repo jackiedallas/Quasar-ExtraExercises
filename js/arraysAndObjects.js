@@ -35,15 +35,16 @@ minMax([37, 3, 56, 4, 754, 92, 29])
  * The original order must be maintained.
  */
 function filterArray(input) {
-	var result = [];
+	var result = new Set();
 	if (Array.isArray(input)){
 		input.forEach(function (element) {
-			if(!isNaN(element)){
-				result.push(element);
+			if(!isNaN(element) && typeof element !== 'string'){
+				result.add(element);
 			}
 		})
 	}
-	console.log(result);
+	var filteredArray = Array.from(result);
+	console.log(filteredArray);
 }
 filterArray(['dog', 2, 'toy', 1, 45])
 filterArray([1, 2, "aasf", "1", "123", 123, 0, 1])
