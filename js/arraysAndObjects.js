@@ -36,14 +36,17 @@ minMax([37, 3, 56, 4, 754, 92, 29])
  */
 function filterArray(input) {
 	var result = new Set();
+	//new Set() is a new function, was able to store the array without duplicating any numbers.
 	if (Array.isArray(input)){
 		input.forEach(function (element) {
 			if(!isNaN(element) && typeof element !== 'string'){
 				result.add(element);
+				// result.add is the method used to add values to the Set
 			}
 		})
 	}
 	var filteredArray = Array.from(result);
+	// Array.from converts the set back to an array
 	console.log(filteredArray);
 }
 filterArray(['dog', 2, 'toy', 1, 45])
