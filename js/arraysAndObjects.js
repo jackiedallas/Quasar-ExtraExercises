@@ -10,9 +10,9 @@
  * Notes
  * All test arrays will have at least one element and are valid.
  */
-// var strNums = arrNums.join(', ')
+
 function minMax(array){
-	// var strArr = array.map(String)
+	// used the .apply method to refer to numbers inside the array input
 	var min = Math.min.apply(null, array);
 	var max = Math.max.apply(null, array);
 	console.log(min + ', ' + max);
