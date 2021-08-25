@@ -10,8 +10,14 @@
  * Notes
  * All test arrays will have at least one element and are valid.
  */
-
-
+// var strNums = arrNums.join(', ')
+function minMax(array){
+	// var strArr = array.map(String)
+	var min = Math.min.apply(null, array);
+	var max = Math.max.apply(null, array);
+	console.log(min + ', ' + max);
+}
+minMax([37, 3, 56, 4, 754, 92, 29])
 /**
  * Filter out Strings from an Array
  * Create a function named filterArray that takes an array of non-negative integers and strings and return a new array without the strings.
