@@ -34,7 +34,7 @@ minMax([37, 3, 56, 4, 754, 92, 29])
  * Numbers in the array should not repeat.
  * The original order must be maintained.
  */
-
+function
 
 /**
  * Is the Average of All Elements a Whole Number?

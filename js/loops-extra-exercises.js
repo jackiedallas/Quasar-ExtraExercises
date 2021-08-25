@@ -12,7 +12,21 @@
  * Notes
  * Expect any positive number between 1 and 1000.
  */
+function addUp(num) {
+	// var result;
+	var idk = []
+	for (var i = 1; i <= num; i++) {
+		idk.push(i);
+	}
+	var addedUp = 0;
+	for (var j = 0; j < idk.length; j++) {
+		addedUp += idk[j];
+	}
+	return addedUp;
 
+}
+
+console.log(addUp(10));
 
 /**
  * TODO:
