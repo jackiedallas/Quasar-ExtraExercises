@@ -156,6 +156,11 @@ sortDrinkByPrice(drinks);
  * Each tile is represented as an object with two keys: tile and score.
  */
 
+function maximumScore(){
+	if(Array.isArray(input)){
+
+	}
+}
 
 /**
  * Converting Objects to Arrays

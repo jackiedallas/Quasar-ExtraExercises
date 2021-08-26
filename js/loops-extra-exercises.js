@@ -42,6 +42,11 @@ console.log(addUp(10));
  * Your output must be case-sensitive (see second example).
  */
 
+function charCount(ch, string){
+
+}
+
+charCount('e', 'esports')
 
 /**
  * TODO:
