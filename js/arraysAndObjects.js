@@ -18,6 +18,7 @@ function minMax(array){
 	console.log(min + ', ' + max);
 }
 minMax([37, 3, 56, 4, 754, 92, 29])
+minMax([1, 2, 3, 4, 5])
 /**
  * Filter out Strings from an Array
  * Create a function named filterArray that takes an array of non-negative integers and strings and return a new array without the strings.
@@ -63,8 +64,18 @@ filterArray([1, 2, "aasf", "1", "123", 123, 0, 1])
  * >> isAvgWhole([1, 1, 1]) ➞ true
  * >> isAvgWhole([9, 2, 2, 5]) ➞ false
  */
-
-
+function isAvgWhole(input){
+	if(Array.isArray(input)){
+		var sum = 0;
+		for (let i = 0; i < input.length; i++) {
+			sum += input[i];
+		}
+		var average = sum / input.length;
+		console.log(Number.isInteger(average));
+	}
+}
+isAvgWhole([1, 2, 3, 4])
+isAvgWhole([1, 5, 6])
 /**
  * Drink Sorting
  * You will be given an array of drinks, with each drink being an object with two properties: name and price.
