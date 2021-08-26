@@ -68,6 +68,7 @@ function isAvgWhole(input){
 	if(Array.isArray(input)){
 		var sum = 0;
 		for (let i = 0; i < input.length; i++) {
+			// this is how you add a number back into a variable.
 			sum += input[i];
 		}
 		var average = sum / input.length;
@@ -90,7 +91,26 @@ isAvgWhole([1, 5, 6])
  * Examples
  * >> sortDrinkByPrice(drinks) ➞ [{name: "lime", price: 10}, {name: "lemonade", price: 50}]
  */
+drinks = [
+	{name: "lemonade", price: 50},
+    {name: "lime", price: 10},
+	{name: "cherry", price: 35}
+]
 
+function sortDrinkByPrice(input) {
+	if(Array.isArray(input)) {
+		// drinks = [
+		// 	{name: "lemonade", price: 50},
+		// 	{name: "lime", price: 10}
+		// ]
+		var sorted = input.sort(function (a, b) {
+			return a.price - b.price
+		});
+		// var sorted = input.sort((a, b) => (a.price > b.price) ? 1 : -1);
+		console.log(sorted)
+	}
+}
+sortDrinkByPrice(drinks);
 
 /**
  * Scrabble Hand
