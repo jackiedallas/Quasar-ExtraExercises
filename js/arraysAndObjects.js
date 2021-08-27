@@ -155,13 +155,37 @@ sortDrinkByPrice(drinks);
  * Notes
  * Each tile is represented as an object with two keys: tile and score.
  */
+var hand = [
+      { tile: "N", score: 1 },
+      { tile: "K", score: 5 },
+      { tile: "Z", score: 10 },
+      { tile: "X", score: 8 },
+      { tile: "D", score: 2 },
+      { tile: "A", score: 1 },
+      { tile: "E", score: 1 }
+ ]
+var hand2 = [
+	{ tile: "B", score: 2 },
+	{ tile: "V", score: 4 },
+	{ tile: "F", score: 4 },
+	{ tile: "U", score: 1 },
+	{ tile: "D", score: 2 },
+	{ tile: "O", score: 1 },
+	{ tile: "U", score: 1 }
+]
 
-function maximumScore(){
-	if(Array.isArray(input)){
-
+function maximumScore(input) {
+	if (Array.isArray(input)) {
+		var totalscore = 0;
+		for (let i = 0; i < input.length; i++) {
+			totalscore += input[i].score;
+		}
+		console.log(totalscore);
 	}
 }
 
+maximumScore(hand);
+maximumScore(hand2);
 /**
  * Converting Objects to Arrays
  * Write a function named toArray that converts an object into an array, where each element represents a key-value pair in the form of an array.
@@ -176,7 +200,14 @@ function maximumScore(){
  * Return an empty array if the object is empty.
  */
 
-
+function toArray(object) {
+	//Object method has 3 ways to do this, 'Object.keys', 'Object.entries', 'Object.values'
+	var objArray = Object.entries(object)
+	console.log(objArray);
+}
+toArray({ a: 1, b: 2 });
+toArray({});
+toArray({ shrimp: 15, tots: 12 })
 /**
  * Array of Multiples
  * Create a function named arrayOfMultiples that takes two numbers as arguments (num, length) and returns an array of multiples of num until the array length reaches length.
@@ -191,7 +222,12 @@ function maximumScore(){
  * Notice that num is also included in the returned array.
  */
 
-
+function arrayOfMultiples(num, arrLength) {
+	var array = [];
+	// still figuring out how to push multiples to the array
+	// console.log(array);
+}
+arrayOfMultiples(7, 5)
 /**
  * Get Sum of People's Budget
  * Create the function named getBudgets that takes an array with objects and returns the sum of people's budgets.
