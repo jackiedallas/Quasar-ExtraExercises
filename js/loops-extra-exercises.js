@@ -43,10 +43,23 @@ console.log(addUp(10));
  */
 
 function charCount(ch, string){
-
+	// var count = 0;
+	var strArr = string.split(ch).length-1;
+	// It's splitting on the 'ch' argument and creating an index for each time it appears in the second argument. Length - 1 returns the exact amount excluding the 0 index.
+	// for (var i = 0; i < strArr.length; i++) {
+	// 	if(ch === strArr[i]) {
+	// 		return count += 1;
+	// 	}
+	// }
+	console.log(string.split(ch))
+	console.log(strArr);
+ 
 }
 
 charCount('e', 'esports')
+charCount("b", "big fat bubble")
+charCount("c", "Chamber of secrets")
+charCount("a", "edabit")
 
 /**
  * TODO:
