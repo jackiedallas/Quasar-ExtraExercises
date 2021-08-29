@@ -26,8 +26,11 @@ function addUp(num) {
 
 }
 
-console.log(addUp(10));
-
+console.log("The number 10 added up is: " + addUp(10));
+console.log("The number 4 added up is: " + addUp(4));
+console.log("The number 13 added up is: " + addUp(13));
+console.log("The number 600 added up is: " + addUp(600));
+console.log("-----------------------------------")
 /**
  * TODO:
  * Count Instances of a Character in a String
@@ -51,16 +54,17 @@ function charCount(ch, string){
 	// 		return count += 1;
 	// 	}
 	// }
-	console.log(string.split(ch))
-	console.log(strArr);
+	return string.split(ch).length-1;
+	// console.log(string.split(ch))
+	// console.log(strArr);
  
 }
 
-charCount('e', 'esports')
-charCount("b", "big fat bubble")
-charCount("c", "Chamber of secrets")
-charCount("a", "edabit")
-
+console.log("The string 'e' appears in the string 'esports' " + charCount('e', 'esports') + " times.");
+console.log("The string 'b' appears in the string 'big fat bubble' " + charCount("b", "big fat bubble") + " times.");
+console.log("The string 'c' appears in the string 'Chamber of secrets' " + charCount("c", "Chamber of secrets") + " times.");
+console.log("The string 'a' appears in the string 'edabit' " + charCount("a", "edabit") + " times.");
+console.log("------------------------------------------");
 /**
  * TODO:
  * Return the Index of the First Vowel
@@ -79,6 +83,20 @@ charCount("a", "edabit")
  * Input always contains a vowel.
  */
 
+function firstVowel(string) {
+	var lowStr = string.toLowerCase();
+	var strArr = lowStr.split('');
+	for (let i = 0; i < strArr.length; i++) {
+		if(strArr[i] === 'a' || strArr[i] === 'e' || strArr[i] === 'i' || strArr[i] === 'o' || strArr[i] === 'u'){
+			return i;
+		}
+	}
+}
+
+console.log("The index of the first vowel in the string 'STRAWBERRY' is " + firstVowel("STRAWBERRY"));
+console.log("The index of the first vowel in the string 'apple' is " +firstVowel("apple"));
+console.log("The index of the first vowel in the string 'hello' is " +firstVowel("hello"));
+console.log("The index of the first vowel in the string 'pInEaPPLe' is " +firstVowel("pInEaPPLe"));
 
 /**
  * TODO:
@@ -98,6 +116,9 @@ charCount("a", "edabit")
  * For an added challenge, try to solve this without using strings.
  */
 
+function count(number) {
+
+}
 
 /**
  * TODO:
