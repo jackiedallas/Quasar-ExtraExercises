@@ -97,7 +97,7 @@ console.log("The index of the first vowel in the string 'STRAWBERRY' is " + firs
 console.log("The index of the first vowel in the string 'apple' is " +firstVowel("apple"));
 console.log("The index of the first vowel in the string 'hello' is " +firstVowel("hello"));
 console.log("The index of the first vowel in the string 'pInEaPPLe' is " +firstVowel("pInEaPPLe"));
-
+console.log("--------------------------------------------")
 /**
  * TODO:
  * Integer Digits Count
@@ -117,9 +117,20 @@ console.log("The index of the first vowel in the string 'pInEaPPLe' is " +firstV
  */
 
 function count(number) {
-
+	var numStr = number.toString();
+	var numArr = numStr.split('');
+	if(number < 0){
+		console.log(numArr.length - 1);
+	} else{
+		console.log(numArr.length);
+	}
 }
-
+count(318);
+count(-92563);
+count(4666);
+count(-314890);
+count(654321093);
+console.log("---------------------------------------")
 /**
  * TODO:
  * Remove the Letters ABC
