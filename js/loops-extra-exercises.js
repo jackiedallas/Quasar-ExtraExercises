@@ -145,7 +145,28 @@ console.log("---------------------------------------")
  * If the given string does not contain "a", "b", or "c", return null.
  */
 
-
+function removeABC(string) {
+	if (typeof string === 'string') {
+		var strArr = string.split('');
+		var newArr = [];
+		if (strArr.includes('a' || 'b' || 'c')) {
+			for (let i = 0; i < strArr.length; i++) {
+				if (strArr[i] === 'a' || strArr[i] === 'b' || strArr[i] === 'c') {
+					continue;
+				}
+				newArr += strArr[i];
+			}
+			console.log(newArr);
+		} else {
+			console.log(null)
+		}
+	}
+}
+removeABC("This might be a bit hard");
+removeABC("hello world!");
+removeABC("");
+removeABC("Star Wars: The rise of the sky walker");
+console.log("-----------------------------------------");
 /**
  * TODO:
  * Write a function named reverseOdd that will take a string as argument, reverse all the words which have odd length. The even length words are not changed.
