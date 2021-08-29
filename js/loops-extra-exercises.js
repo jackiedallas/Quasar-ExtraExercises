@@ -183,7 +183,32 @@ console.log("-----------------------------------------");
  * Should work with only one word.
  */
 
-
+function reverseOdd(string) {
+	var strArr = string.split(' ');
+	// console.log(strArr);
+	var newArr = [];
+	for (let i = 0; i < strArr.length; i++) {
+		if(strArr[i].length % 2 !== 0){
+			// splitting into an array if length is odd
+			var splitArr = strArr[i].split('');
+			//reversing order of array
+			var arrReverse = splitArr.reverse();
+			// rejoing into string
+			var revStr = arrReverse.join('');
+			newArr.push(revStr);
+		} else if(strArr[i].length % 2 === 0){
+			newArr.push(strArr[i]);
+		}
+	}
+	// joining the new array of strings into one string with single spacing between each word
+	var revOdds = newArr.join(' ')
+	console.log(revOdds);
+}
+reverseOdd("There is exactly one space between each word and no punctuation is used");
+reverseOdd("Bananas");
+reverseOdd("One two three four");
+reverseOdd("Make sure uoy only esrever sdrow of ddo length");
+console.log("------------------");
 /**
  * TODO:
  * Convert a Number to Base-2
