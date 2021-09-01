@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Function Exercises</title>
+</head>
+<body>
+	<script>
+		
+		function tellFortune(numOfChildren, name, location, jobTitle) {
+		  // alert("You will be a " + jobTitle + " in " + location + ", " + "married to " + name + " with " + numOfChildren + " kids.");
+		  console.log("You will be a " + jobTitle + " in " + location + ", " + "married to " + name + " with " + numOfChildren + " kids.")
+		}
+		
+		tellFortune(8, "Billy Jean", "Wisconsin", "Software Engineer");
+		tellFortune(2, "Kayla", "San Antonio", "Full Stack Web Dev");
+		
+		function calculateDogAge(dogAge) {
+		  var dogYears = dogAge * 7;
+		  console.log("Your doggie is " + dogYears + " years old in dog years!")
+		}
+		
+		calculateDogAge(8);
+		calculateDogAge(2);
+		
+		function calculateSupply(age, amountPerDay) {
+		var amountPeryear = amountPerDay * 365;
+		var lifeTimeSupply = amountPeryear * age;
+			console.log("You will need " + lifeTimeSupply + " snacks to last you until the ripe old age of " + age + ".")
+		}
+		
+		calculateSupply(65, 1)
+		
+		function calcCircumfrence() {
+			
+		}
+	</script>
+</body>
+</html>

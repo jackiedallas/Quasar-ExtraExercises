@@ -183,7 +183,7 @@ describe('toArray',  function () {
         expect(typeof toArray).toBe('function');
     });
     it('should return an array when executed', function () {
-        expect(Array.isArray({})).toBe(true);
+        expect(Array.isArray(toArray({}))).toBe(true);
     });
     it('should return [["a", 1], ["b", 2]] when passed in { a: 1, b: 2 }', function () {
         expect(toArray({ a: 1, b: 2 })).toEqual([["a", 1], ["b", 2]]);
