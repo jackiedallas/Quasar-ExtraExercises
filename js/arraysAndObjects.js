@@ -315,6 +315,19 @@ console.log(isSpecialArray([2, 7, 9, 1, 6, 1, 6, 3]));
  * Each array item is unique.
  */
 
+function removeDuplicates(array) {
+	var result = new Set();
+	if(Array.isArray(array)) {
+		array.forEach(function (element) {
+			result.add(element);
+		});
+	}
+	var newArray = Array.from(result);
+	console.log(newArray);
+}
+removeDuplicates([1, 0, 1, 0]);
+removeDuplicates(["The", "big", "cat"]);
+removeDuplicates(["John", "Taylor", "John"]);
 
 /**
  * Lowercase and Uppercase Map
