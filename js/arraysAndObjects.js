@@ -343,6 +343,12 @@ removeDuplicates(["John", "Taylor", "John"]);
  * All of the letters in the input list will always be lowercase.
  */
 
+function mapping(array) {
+	array.map(function (element){
+	
+	
+	})
+}
 
 /**
  * Can You Spare a Square?
