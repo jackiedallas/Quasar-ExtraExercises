@@ -180,12 +180,12 @@ function maximumScore(input) {
 		for (let i = 0; i < input.length; i++) {
 			totalscore += input[i].score;
 		}
-		console.log(totalscore);
+		return totalscore;
 	}
 }
 
-maximumScore(hand);
-maximumScore(hand2);
+console.log(maximumScore(hand));
+console.log(maximumScore(hand2));
 /**
  * Converting Objects to Arrays
  * Write a function named toArray that converts an object into an array, where each element represents a key-value pair in the form of an array.
@@ -202,12 +202,14 @@ maximumScore(hand2);
 
 function toArray(object) {
 	//Object method has 3 ways to do this, 'Object.keys', 'Object.entries', 'Object.values'
-	var objArray = Object.entries(object)
-	console.log(objArray);
+	return Object.entries(object)
+	// console.log(objArray);
 }
-toArray({ a: 1, b: 2 });
-toArray({});
-toArray({ shrimp: 15, tots: 12 })
+
+console.log(toArray({a: 1, b: 2}));
+console.log(toArray({}));
+console.log(toArray({shrimp: 15, tots: 12}));
+
 /**
  * Array of Multiples
  * Create a function named arrayOfMultiples that takes two numbers as arguments (num, length) and returns an array of multiples of num until the array length reaches length.
@@ -322,12 +324,13 @@ function removeDuplicates(array) {
 			result.add(element);
 		});
 	}
-	var newArray = Array.from(result);
-	console.log(newArray);
+	return Array.from(result);
+	// return newArray;
 }
-removeDuplicates([1, 0, 1, 0]);
-removeDuplicates(["The", "big", "cat"]);
-removeDuplicates(["John", "Taylor", "John"]);
+
+console.log(removeDuplicates([1, 0, 1, 0]));
+console.log(removeDuplicates(["The", "big", "cat"]));
+console.log(removeDuplicates(["John", "Taylor", "John"]));
 
 /**
  * Lowercase and Uppercase Map
@@ -344,12 +347,22 @@ removeDuplicates(["John", "Taylor", "John"]);
  */
 
 function mapping(array) {
-	array.map(function (element){
-	
-	
-	})
+	var key, keys = Object.keys(array);
+	var i = keys.length;
+	var newArray = {};
+	while(i--){
+		key = keys[i];
+		newArray[key.toUpperCase()] = array[key];
+	}
+	return newArray;
+	// array.forEach(function (element){
+	// 	console.log(`array.${element} = ${array[element].toUpperCase()}`)
+	// })
 }
 
+console.log(mapping(["p", "s"]));
+
+console.log(mapping(["a", "b", "c"]));
 /**
  * Can You Spare a Square?
  * Try to imagine a world in which you might have to stay home for 14 days at any given time. Do you have enough TP to make it through?

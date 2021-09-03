@@ -15,13 +15,14 @@
 		tellFortune(8, "Billy Jean", "Wisconsin", "Software Engineer");
 		tellFortune(2, "Kayla", "San Antonio", "Full Stack Web Dev");
 		
-		function calculateDogAge(dogAge) {
-		  var dogYears = dogAge * 7;
-		  console.log("Your doggie is " + dogYears + " years old in dog years!")
+		function calculateDogAge(dogAge, converstionRate) {
+			var humanAge = dogAge * converstionRate;
+		  // console.log("Your doggie is " + humanAge + " years old in human years!");
+		  return "Your doggie is " + humanAge + " years old in human years!";
 		}
 		
-		calculateDogAge(8);
-		calculateDogAge(2);
+		calculateDogAge(7, 7);
+		calculateDogAge(2, 7);
 		
 		function calculateSupply(age, amountPerDay) {
 		var amountPeryear = amountPerDay * 365;
