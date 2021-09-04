@@ -347,22 +347,34 @@ console.log(removeDuplicates(["John", "Taylor", "John"]));
  */
 
 function mapping(array) {
-	var key, keys = Object.keys(array);
-	var i = keys.length;
-	var newArray = {};
-	while(i--){
-		key = keys[i];
-		newArray[key.toUpperCase()] = array[key];
+	if (Array.isArray(array)) {
+		var newArray = {};
+			array.forEach(function (low){
+			newArray = Object.assign(array[low]);
+			})
+		
 	}
-	return newArray;
+	console.log(newArray);
+	// return array.map(element.toUpperCase);
+	
+	//--While loop attempt below
+	// var key, keys = Object.keys(array);
+	// var i = keys.length;
+	// var newArray = {};
+	// while(i--){
+	// 	key = keys[i];
+	// 	newArray[key.toUpperCase()] = array[key];
+	// }
+	// return newArray;
+	//--For Each Attempt below
 	// array.forEach(function (element){
 	// 	console.log(`array.${element} = ${array[element].toUpperCase()}`)
 	// })
 }
 
-console.log(mapping(["p", "s"]));
+mapping(["p", "s"]);
 
-console.log(mapping(["a", "b", "c"]));
+mapping(["a", "b", "c"]);
 /**
  * Can You Spare a Square?
  * Try to imagine a world in which you might have to stay home for 14 days at any given time. Do you have enough TP to make it through?
