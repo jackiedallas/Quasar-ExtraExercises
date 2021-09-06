@@ -130,6 +130,7 @@ console.log(amplify(20));
  * For reference these temps are °F but you do not need to convert any temperatures.
  */
 
+
 function recordTemps(array1, array2) {
 	function minMax(array){
 		// used the .apply method to refer to numbers inside the array input
@@ -139,7 +140,6 @@ function recordTemps(array1, array2) {
 		result.push(min, max);
 		return result;
 	}
-	
 	
 	var result = [];
 	// created an empty array for each day of the week
@@ -184,11 +184,6 @@ function recordTemps(array1, array2) {
 	
 	// return result;
 	console.log(result);
-	
-	
-	
-	
-	// return result;
 }
 
 recordTemps([[34, 82], [24, 82], [20, 89],  [5, 88],  [9, 88], [26, 89], [27, 83]],
@@ -211,7 +206,29 @@ recordTemps([[34, 82], [24, 82], [20, 89],  [5, 88],  [9, 88], [26, 89], [27, 83
  * indexShuffle("maybe") ➞ "myeab"
  */
 
+function indexShuffle(string) {
+	result = [];
+	var stringArray = string.split('');
+	var evenCh =[];
+	var oddCh = [];
+	for (var i = 0; i < stringArray.length; i++) {
+		if(i % 2 === 0){
+			evenCh.push(stringArray[i]);
+		} else if(i % 2 !== 0){
+			oddCh.push(stringArray[i]);
+		}
+	}
+	result.push(evenCh.join(''));
+	result.push(oddCh.join(''));
+	result.join("");
+	
+	var newResult = result.join('')
+	console.log(newResult);
+}
 
+indexShuffle("abcdefg")
+indexShuffle("holiday")
+indexShuffle("maybe")
 /**
  * Instant JAZZ
  * Create a function named jazzify which concantenates the number 7 to the end of every chord in an array. Ignore all chords which already end with 7.
