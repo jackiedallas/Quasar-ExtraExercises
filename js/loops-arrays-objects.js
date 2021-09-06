@@ -22,10 +22,19 @@ function hashPlusCount(string) {
 		return false;
 	}
 	var strArr = string.split('');
+	var hashArr = [];
+	var plusArr = [];
 	for (var i = 0; i < strArr.length; i++) {
-	
+		if(strArr[i] === '#') {
+			hashArr.push(strArr[i]);
+		} else if (strArr[i] === '+') {
+			plusArr.push(strArr[i]);
+		}
 	}
+	return [hashArr.length, plusArr.length];
 }
+
+console.log(hashPlusCount());
 
 /**
  * Amplify the Multiples of Four
