@@ -274,6 +274,18 @@ jazzify(["F7", "E7", "A7", "Ab7", "Gm7", "C7"])
  * uniqueSort([6, 7, 3, 2, 1]) ➞ [1, 2, 3, 6, 7]
  */
 
+function uniqueSort(array) {
+	// create a set so that it can remove duplicate elements
+	var result = new Set()
+	var sortedArray = array.sort();
+	for (var i = 0; i < sortedArray.length; i++) {
+		result.add(sortedArray[i]);
+	}
+	uniqueArray = Array.from(result)
+	console.log(uniqueArray)
+}
+uniqueSort([1, 4, 4, 4, 4, 4, 3, 2, 1, 2])
+uniqueSort([6, 7, 3, 2, 1])
 
 /**
  * Capitalize the First Letter of Each Word
