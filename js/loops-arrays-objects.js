@@ -92,7 +92,8 @@ function amplify(num) {
 	return ampedArray;
 }
 
-console.log(amplify(25));
+console.log(amplify(20));
+
 
 /**
  * Record Temperatures
@@ -128,6 +129,31 @@ console.log(amplify(25));
  * Index 0 will always be the low and index 1 will always be the high [low, high].
  * For reference these temps are °F but you do not need to convert any temperatures.
  */
+
+function recordTemps(array1, array2) {
+	var result = [];
+	// created an empty array for each day of the week
+	var sun = [];
+	var mon = [];
+	var tues = [];
+	var wed = [];
+	var thur = [];
+	var fri = [];
+	var sat = [];
+	
+	// create a loop to push the temps for each day of the week to their respective empty arrays
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	return result;
+}
+
 
 
 /**
