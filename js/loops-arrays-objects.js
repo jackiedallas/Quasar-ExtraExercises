@@ -244,9 +244,21 @@ indexShuffle("maybe")
  * Return an empty array if the given array is empty.
  */
 
-function jazzify() {
-
+function jazzify(array) {
+	// create for loop that adds 7 to every chord
+	result = [];
+	for (var i = 0; i < array.length; i++) {
+		if(array[i].includes('7')){
+			result.push(array[i])
+		} else {
+			result.push(array[i] + '7');
+		}
+	}
+	console.log(result)
 }
+jazzify(["G7", "F", "C"])
+jazzify(["F7", "E7", "A7", "Ab7", "Gm7", "C7"])
+
 
 
 /**
