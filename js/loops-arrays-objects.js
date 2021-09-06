@@ -34,7 +34,7 @@ function hashPlusCount(string) {
 	return [hashArr.length, plusArr.length];
 }
 
-console.log(hashPlusCount());
+console.log(hashPlusCount("#+++#+#++#"));
 
 /**
  * Amplify the Multiples of Four
