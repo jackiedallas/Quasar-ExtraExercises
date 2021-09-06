@@ -73,7 +73,15 @@ function amplify(num) {
 	for (var i = 1; i < num; i++) {
 		numArray.push(i);
 	}
-	num
+	var ampedArray = [];
+	numArray.forEach(function (number) {
+		if (number % 4 !== 0){
+			ampedArray.push(numArray[number])
+		} else if (number % 4 === 0){
+			ampedArray.push(numArray[number] * 10)
+		}
+	})
+	return ampedArray;
 }
 
 
