@@ -244,6 +244,10 @@ indexShuffle("maybe")
  * Return an empty array if the given array is empty.
  */
 
+function jazzify() {
+
+}
+
 
 /**
  * Purge and Organize
