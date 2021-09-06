@@ -131,6 +131,16 @@ console.log(amplify(20));
  */
 
 function recordTemps(array1, array2) {
+	function minMax(array){
+		// used the .apply method to refer to numbers inside the array input
+		var result = [];
+		var min = Math.min.apply(null, array);
+		var max = Math.max.apply(null, array);
+		result.push(min, max);
+		return result;
+	}
+	
+	
 	var result = [];
 	// created an empty array for each day of the week
 	var sun = [];
@@ -141,19 +151,48 @@ function recordTemps(array1, array2) {
 	var fri = [];
 	var sat = [];
 	
-	// create a loop to push the temps for each day of the week to their respective empty arrays
+	// push values into respective day of the week arrays
+	sun.push(array1[0], array2[0]);
+	mon.push(array1[1], array2[1]);
+	tues.push(array1[2], array2[2]);
+	wed.push(array1[3], array2[3]);
+	thur.push(array1[4], array2[4]);
+	fri.push(array1[5], array2[5]);
+	sat.push(array1[6], array2[6]);
+	
+	// join and split into a single array and take min and max of each
+	var tempSun = sun.join(',').split(',');
+	result.push(minMax(tempSun));
+	
+	var tempMon = mon.join(',').split(',');
+	result.push(minMax(tempMon));
+	
+	var tempTues = tues.join(',').split(',');
+	result.push(minMax(tempTues));
+	
+	var tempWed = wed.join(',').split(',');
+	result.push(minMax(tempWed));
+	
+	var tempThur = thur.join(',').split(',');
+	result.push(minMax(tempThur));
+	
+	var tempFri = fri.join(',').split(',');
+	result.push(minMax(tempFri));
+	
+	var tempSat = sat.join(',').split(',');
+	result.push(minMax(tempSat));
+	
+	// return result;
+	console.log(result);
 	
 	
 	
 	
-	
-	
-	
-	
-	
-	return result;
+	// return result;
 }
 
+recordTemps([[34, 82], [24, 82], [20, 89],  [5, 88],  [9, 88], [26, 89], [27, 83]],
+          [[44, 72], [19, 70], [40, 69], [39, 68], [33, 64], [36, 70], [38, 69]])
 
 
 /**
