@@ -13,7 +13,19 @@
  * Return [0, 0] for an empty string.
  * Return in the order of [hashes, pluses].
  */
-
+// validate that input is a string
+// validate that inputs are hashes and pluses
+// separate into two different arrays and return the length of each array
+// join output into a new array
+function hashPlusCount(string) {
+	if(typeof string !== 'string'){
+		return false;
+	}
+	var strArr = string.split('');
+	for (var i = 0; i < strArr.length; i++) {
+	
+	}
+}
 
 /**
  * Amplify the Multiples of Four
