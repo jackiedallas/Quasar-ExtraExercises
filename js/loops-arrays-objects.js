@@ -65,6 +65,17 @@ console.log(hashPlusCount("#+++#+#++#"));
  * A number a is exactly divisible by a number b when the remainder of the division a / b is equal to 0.
  */
 
+// write code to create an array of numbers up to the argument
+// write code to loop through the array and find numbers divisible
+// write code to multiply the numbers divisible by 4 times 10
+function amplify(num) {
+	var numArray = [];
+	for (var i = 1; i < num; i++) {
+		numArray.push(i);
+	}
+	num
+}
+
 
 /**
  * Record Temperatures
