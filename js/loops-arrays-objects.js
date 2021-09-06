@@ -70,20 +70,29 @@ console.log(hashPlusCount("#+++#+#++#"));
 // write code to multiply the numbers divisible by 4 times 10
 function amplify(num) {
 	var numArray = [];
-	for (var i = 1; i < num; i++) {
+	for (var i = 0; i <= num; i++) {
 		numArray.push(i);
 	}
 	var ampedArray = [];
-	numArray.forEach(function (number) {
-		if (number % 4 !== 0){
-			ampedArray.push(numArray[number])
-		} else if (number % 4 === 0){
-			ampedArray.push(numArray[number] * 10)
+	// numArray.forEach(function (number) {
+	// 	if (number % 4 !== 0){
+	// 		ampedArray.push(numArray[number])
+	// 	} else if (number % 4 === 0){
+	// 		ampedArray.push(numArray[number] * 10)
+	// 	}
+	// })
+	for (var j = 1; j < numArray.length ; j++) {
+		// var ampedArray = [];
+		if(numArray[j] % 4 === 0){
+			ampedArray.push(numArray[j] * 10)
+		} else {
+			ampedArray.push(numArray[j])
 		}
-	})
+	}
 	return ampedArray;
 }
 
+console.log(amplify(25));
 
 /**
  * Record Temperatures
