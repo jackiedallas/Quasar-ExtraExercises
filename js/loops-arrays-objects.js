@@ -302,6 +302,17 @@ uniqueSort([6, 7, 3, 2, 1])
  * Some words may contain more than one uppercase letter (see example #4).
  */
 
+function makeTitle(string) {
+	var stringArr = string.split(' ')
+	for (var i = 0; i < stringArr.length; i++) {
+		// slicing at the 1 index and capitalizing at the 0 index then concat them back together
+		stringArr[i] = stringArr[i].charAt(0).toUpperCase() + stringArr[i].slice(1);
+	}
+	// joining array back as a string with a space separator
+	var newString = stringArr.join(" ")
+	console.log(newString)
+}
+makeTitle("This is a title")
 
 /**
  * Online Shopping
