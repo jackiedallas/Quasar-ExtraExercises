@@ -312,7 +312,8 @@ function makeTitle(string) {
 	var newString = stringArr.join(" ")
 	console.log(newString)
 }
-makeTitle("This is a title")
+makeTitle("This is a title");
+makeTitle("Create a function named freeShipping that determines whether a shopping order is eligible for free shipping.");
 
 /**
  * Online Shopping
@@ -327,6 +328,10 @@ makeTitle("This is a title")
  * Notes
  * Ignore tax or additional fees when calculating the total order cost.
  */
+
+function freeShipping(object){
+
+}
 
 
 /**

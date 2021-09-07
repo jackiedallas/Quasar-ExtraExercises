@@ -224,8 +224,17 @@ console.log(toArray({shrimp: 15, tots: 12}));
  * Notice that num is also included in the returned array.
  */
 
-function arrayOfMultiples(num, arrLength) {
+function arrayOfMultiples(num, length) {
+	// var i = 0;
 	var array = [];
+	for (var i = 0; i <= length; i++) {
+		array.push(i)
+	}
+	// while(i <= length) {
+	// 	array.push(i += num);
+	// }
+	console.log(array);
+	
 	// still figuring out how to push multiples to the array
 	// console.log(array);
 }

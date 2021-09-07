@@ -6,9 +6,22 @@
 // timesFour([2,1,0]) //false
 // timesFour(true) //false
 // timesFour(null) //false
+function timesFour(input) {
+	var allNums = parseInt(input);
+	if(!isNaN(allNums)){
+		return allNums * 4;
+	} else {
+		return false;
+	}
+}
 
-
-
+console.log(timesFour(0));
+console.log(timesFour(-5));
+console.log(timesFour("5"));
+console.log(timesFour('Texas'));
+console.log(timesFour([2, 1, 0]));
+console.log(timesFour(true));
+console.log(timesFour(null));
 
 // Define a function named convertDaystoHours that takes in one input Days. Return the conversion of the number of days into total hours. If the input is not numeric or a numeric string, convertDaystoHours, should return false.
 // convertDaystoHours(0) //0
