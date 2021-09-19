@@ -329,11 +329,24 @@ makeTitle("Create a function named freeShipping that determines whether a shoppi
  * Ignore tax or additional fees when calculating the total order cost.
  */
 
-function freeShipping(object){
-
+function freeShipping(input){
+	var values = Object.values(input);
+	// console.log(totals);
+	var totals = 0;
+	for (var i = 0; i < values.length; i++) {
+		totals += values[i];
+	}
+	// console.log(totals);
+	if(totals > 50) {
+		console.log("Free Shipping")
+	} else {
+		console.log("No Free Shipping");
+	}
 }
 
-
+freeShipping({Shampoo: 5.99, Rubber_Ducks: 15.99});
+freeShipping({ Flatscreen_TV: 399.99 });
+freeShipping({ Monopoly: 11.99, Secret_Hitler: 35.99, Bananagrams: 13.99 });
 /**
  * How Good is Your Name?
  * Create a function named nameScore that takes a string of name and checks how much good is the given name. A preloaded dictionary of alphabet scores is available below. Add up the letters of your name to get the total score.
