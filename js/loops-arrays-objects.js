@@ -351,10 +351,10 @@ freeShipping({ Monopoly: 11.99, Secret_Hitler: 35.99, Bananagrams: 13.99 });
  * How Good is Your Name?
  * Create a function named nameScore that takes a string of name and checks how much good is the given name. A preloaded dictionary of alphabet scores is available below. Add up the letters of your name to get the total score.
  *
- * const scores = {"A": 100, "B": 14, "C": 9, "D": 28, "E": 145, "F": 12, "G": 3,
- * "H": 10, "I": 200, "J": 100, "K": 114, "L": 100, "M": 25,
- * "N": 450, "O": 80, "P": 2, "Q": 12, "R": 400, "S": 113,
- * "T": 405, "U": 11, "V": 10, "W": 10, "X": 3, "Y": 210, "Z": 23}
+  const scores = {"A": 100, "B": 14, "C": 9, "D": 28, "E": 145, "F": 12, "G": 3,
+  "H": 10, "I": 200, "J": 100, "K": 114, "L": 100, "M": 25,
+  "N": 450, "O": 80, "P": 2, "Q": 12, "R": 400, "S": 113,
+  "T": 405, "U": 11, "V": 10, "W": 10, "X": 3, "Y": 210, "Z": 23}
  *
  * Return your result as per the following rules:
  *
@@ -373,7 +373,14 @@ freeShipping({ Monopoly: 11.99, Secret_Hitler: 35.99, Bananagrams: 13.99 });
  * Notes
  * All names will be uppercase
  */
+const scores = {"A": 100, "B": 14, "C": 9, "D": 28, "E": 145, "F": 12, "G": 3,
+	"H": 10, "I": 200, "J": 100, "K": 114, "L": 100, "M": 25,
+	"N": 450, "O": 80, "P": 2, "Q": 12, "R": 400, "S": 113,
+	"T": 405, "U": 11, "V": 10, "W": 10, "X": 3, "Y": 210, "Z": 23}
 
+function nameScore(name) {
+
+}
 
 /**
  * Burglary Series (06): Convert to Number
