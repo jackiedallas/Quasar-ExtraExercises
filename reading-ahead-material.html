@@ -5,33 +5,99 @@
 	<title>Reading Ahead Material</title>
 </head>
 <body>
-	<h1>BOM & DOM Module</h1>
-	
+	<h1 class="header">BOM & DOM Module</h1>
+	<button id="btnToClick">Click Me</button>
+	<h1>List One</h1>
+	<ul>
+		<li class="odd list-one-item">List 1, Item 1</li>
+		<li class="even list-one-item">List 1, Item 2</li>
+	</ul>
+	<h1>List Two</h1>
+	<ul>
+		<li class="odd list-two-item">List 2, Item 1</li>
+		<li class="even list-two-item">List 2, Item 2</li>
+	</ul>
+	<form name="login">
+		<div>
+			<label for="username">Username</label>
+			<input id="username" name="username" type="text">
+		</div>
+		<div>
+			<label for="password">Password</label>
+			<input id="password" name="password" type="password">
+		</div>
+		<div>
+			<input type="submit">
+		</div>
+	</form>
 	<script>
 		'use strict';
+		
+		var title = document.getElementById('header');
+			console.log(title.innerHTML);
+		// get the "username" input
+		var usernameInput = document.forms.login.username;
+		
+		// log the value of the "username" input
+		console.log(usernameInput.value);
+		
+		// Get all elements with class 'even'
+		var evenElements = document.getElementsByClassName('even');
+		
+		// Print the first element
+		console.log(evenElements[0]); // Prints li.even.list-one-item
+		
+		// Print all elements
+		for (var i = 0; i < evenElements.length; i++) {
+			console.log(evenElements[i]);
+		}
+		
+		// Prints:
+		// li.even.list-one-item
+		// li.even.list-two-item
+		
+		var listItems = document.getElementsByTagName('li');
+		
+		// Print the first list item
+		console.log(listItems[0]); // Prints li.odd.list-one-item
+		
+		// Print all the list items
+		for (var i = 0; i < listItems.length; i++) {
+			console.log(listItems[i]);
+		}
+		
+		// Prints
+		// li.odd.list-one-item
+		// li.even.list-one-item
+		// li.odd.list-two-item
+		// li.even.list-two-item
+		
+		var btnToClick = document.getElementById('btnToClick');
+		
+		console.log(btnToClick); // prints <button id="btnToClick">Click Me</button>
 		
 		// this code will produce a console log every second
 		// when count >= max, the interval is cancelled, and the logging will stop
 		
-		var count = 0;
-		var max = 10;
-		var interval = 1000; // interval time in milliseconds
-		
-		var counting = setInterval(function () {
-			if (count >= max) {
-				clearInterval(counting);
-				console.log('All done');
-			} else {
-				count++;
-				console.log('Repeating this line ' + count);
-			}
-		}, interval);
-		
-		var delay = 5000; // delay time in milliseconds
-		
-		var timeoutId = setTimeout(function () {
-			alert('Here is a delayed hello!');
-		}, delay);
+		// var count = 0;
+		// var max = 10;
+		// var interval = 1000; // interval time in milliseconds
+		//
+		// var counting = setInterval(function () {
+		// 	if (count >= max) {
+		// 		clearInterval(counting);
+		// 		console.log('All done');
+		// 	} else {
+		// 		count++;
+		// 		console.log('Repeating this line ' + count);
+		// 	}
+		// }, interval);
+		//
+		// var delay = 5000; // delay time in milliseconds
+		//
+		// var timeoutId = setTimeout(function () {
+		// 	alert('Here is a delayed hello!');
+		// }, delay);
 		
 		// to cancel the timeout, you can call
 		// clearTimeout(timeoutId);
@@ -43,6 +109,9 @@
 		
 		// location.reload(); // reload page, possibly from cache
 		// location.reload(true); // reload page from server
+		
+		
+		
 	</script>
 </body>
 </html>
