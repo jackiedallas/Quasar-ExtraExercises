@@ -31,40 +31,75 @@
 		</div>
 	</form>
 	<script>
+		
+		
+		
+		
 		'use strict';
+		//TODO: Finish coding this program. You need to stop the setInterval() method after the showTime() function has run five times
 		
-		var title = document.getElementById('header');
-			console.log(title.innerHTML);
-		// get the "username" input
-		var usernameInput = document.forms.login.username;
 		
-		// log the value of the "username" input
-		console.log(usernameInput.value);
+		let count = 0;
 		
-		// Get all elements with class 'even'
-		var evenElements = document.getElementsByClassName('even');
-		
-		// Print the first element
-		console.log(evenElements[0]); // Prints li.even.list-one-item
-		
-		// Print all elements
-		for (var i = 0; i < evenElements.length; i++) {
-			console.log(evenElements[i]);
+		function showTime() {
+			
+			// return new date and time
+			let dateTime = new Date();
+			
+			// return the time
+			let time = dateTime.toLocaleTimeString();
+			
+			count += 1;
+			
+			//if the count reaches 5, stop the program.
+			
+			console.log(time)
+			
+			if (count === 5) {
+				clearInterval(display);
+				console.log("You are out of time.")
+			}
+			
 		}
+		
+		let display = setInterval(showTime, 2500);
+		
+		
+		
+		
+		
+		// var title = document.getElementById('header');
+		// 	console.log(title.innerHTML);
+		// // get the "username" input
+		// var usernameInput = document.forms.login.username;
+		//
+		// // log the value of the "username" input
+		// console.log(usernameInput.value);
+		//
+		// // Get all elements with class 'even'
+		// var evenElements = document.getElementsByClassName('even');
+		//
+		// // Print the first element
+		// console.log(evenElements[0]); // Prints li.even.list-one-item
+		//
+		// // Print all elements
+		// for (var i = 0; i < evenElements.length; i++) {
+		// 	console.log(evenElements[i]);
+		// }
 		
 		// Prints:
 		// li.even.list-one-item
 		// li.even.list-two-item
 		
-		var listItems = document.getElementsByTagName('li');
-		
-		// Print the first list item
-		console.log(listItems[0]); // Prints li.odd.list-one-item
-		
-		// Print all the list items
-		for (var i = 0; i < listItems.length; i++) {
-			console.log(listItems[i]);
-		}
+		// var listItems = document.getElementsByTagName('li');
+		//
+		// // Print the first list item
+		// console.log(listItems[0]); // Prints li.odd.list-one-item
+		//
+		// // Print all the list items
+		// for (var i = 0; i < listItems.length; i++) {
+		// 	console.log(listItems[i]);
+		// }
 		
 		// Prints
 		// li.odd.list-one-item
@@ -72,9 +107,9 @@
 		// li.odd.list-two-item
 		// li.even.list-two-item
 		
-		var btnToClick = document.getElementById('btnToClick');
-		
-		console.log(btnToClick); // prints <button id="btnToClick">Click Me</button>
+		// var btnToClick = document.getElementById('btnToClick');
+		//
+		// console.log(btnToClick); // prints <button id="btnToClick">Click Me</button>
 		
 		// this code will produce a console log every second
 		// when count >= max, the interval is cancelled, and the logging will stop

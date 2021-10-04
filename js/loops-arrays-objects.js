@@ -34,7 +34,7 @@ function hashPlusCount(string) {
 	return [hashArr.length, plusArr.length];
 }
 
-console.log(hashPlusCount("#+++#+#++#"));
+// console.log(hashPlusCount("#+++#+#++#"));
 
 /**
  * Amplify the Multiples of Four
@@ -92,7 +92,7 @@ function amplify(num) {
 	return ampedArray;
 }
 
-console.log(amplify(20));
+// console.log(amplify(20));
 
 
 /**
@@ -186,8 +186,8 @@ function recordTemps(array1, array2) {
 	console.log(result);
 }
 
-recordTemps([[34, 82], [24, 82], [20, 89],  [5, 88],  [9, 88], [26, 89], [27, 83]],
-          [[44, 72], [19, 70], [40, 69], [39, 68], [33, 64], [36, 70], [38, 69]])
+// recordTemps([[34, 82], [24, 82], [20, 89],  [5, 88],  [9, 88], [26, 89], [27, 83]],
+//           [[44, 72], [19, 70], [40, 69], [39, 68], [33, 64], [36, 70], [38, 69]])
 
 
 /**
@@ -226,9 +226,9 @@ function indexShuffle(string) {
 	console.log(newResult);
 }
 
-indexShuffle("abcdefg")
-indexShuffle("holiday")
-indexShuffle("maybe")
+// indexShuffle("abcdefg")
+// indexShuffle("holiday")
+// indexShuffle("maybe")
 /**
  * Instant JAZZ
  * Create a function named jazzify which concantenates the number 7 to the end of every chord in an array. Ignore all chords which already end with 7.
@@ -256,8 +256,8 @@ function jazzify(array) {
 	}
 	console.log(result)
 }
-jazzify(["G7", "F", "C"])
-jazzify(["F7", "E7", "A7", "Ab7", "Gm7", "C7"])
+// jazzify(["G7", "F", "C"])
+// jazzify(["F7", "E7", "A7", "Ab7", "Gm7", "C7"])
 
 
 
@@ -284,8 +284,8 @@ function uniqueSort(array) {
 	uniqueArray = Array.from(result)
 	console.log(uniqueArray)
 }
-uniqueSort([1, 4, 4, 4, 4, 4, 3, 2, 1, 2])
-uniqueSort([6, 7, 3, 2, 1])
+// uniqueSort([1, 4, 4, 4, 4, 4, 3, 2, 1, 2])
+// uniqueSort([6, 7, 3, 2, 1])
 
 /**
  * Capitalize the First Letter of Each Word
@@ -312,8 +312,8 @@ function makeTitle(string) {
 	var newString = stringArr.join(" ")
 	console.log(newString)
 }
-makeTitle("This is a title");
-makeTitle("Create a function named freeShipping that determines whether a shopping order is eligible for free shipping.");
+// makeTitle("This is a title");
+// makeTitle("Create a function named freeShipping that determines whether a shopping order is eligible for free shipping.");
 
 /**
  * Online Shopping
@@ -344,9 +344,9 @@ function freeShipping(input){
 	}
 }
 
-freeShipping({Shampoo: 5.99, Rubber_Ducks: 15.99});
-freeShipping({ Flatscreen_TV: 399.99 });
-freeShipping({ Monopoly: 11.99, Secret_Hitler: 35.99, Bananagrams: 13.99 });
+// freeShipping({Shampoo: 5.99, Rubber_Ducks: 15.99});
+// freeShipping({ Flatscreen_TV: 399.99 });
+// freeShipping({ Monopoly: 11.99, Secret_Hitler: 35.99, Bananagrams: 13.99 });
 /**
  * How Good is Your Name?
  * Create a function named nameScore that takes a string of name and checks how much good is the given name. A preloaded dictionary of alphabet scores is available below. Add up the letters of your name to get the total score.
@@ -379,9 +379,28 @@ const scores = {"A": 100, "B": 14, "C": 9, "D": 28, "E": 145, "F": 12, "G": 3,
 	"T": 405, "U": 11, "V": 10, "W": 10, "X": 3, "Y": 210, "Z": 23}
 
 function nameScore(name) {
-
+	// split name into array
+	var nameArr = name.split('');
+	// console.log(nameArr)
+	var score = 0;
+	for (let i = 0; i < nameArr.length; i++) {
+		if (nameArr.map(key, value)) {
+			if (nameArr[i] === scores.key) {
+				score += scores.value;
+			}
+		}
+	}
+	console.log(score);
 }
+// nameScore("MUBASHIR")
 
+// function getKeyByValue(object, value) {
+// 	return Object.keys(object).find(key => object[key] === value);
+// }
+//
+//
+// const map = {"first" : "1", "second" : "2"};
+// console.log(getKeyByValue(map,"2"));
 /**
  * Burglary Series (06): Convert to Number
  * You prepare a list to send to the insurance company. As you finish, you notice you misformatted it.
@@ -393,7 +412,27 @@ function nameScore(name) {
  * convertToNumber({ piano: "200", tv: "300" }) ➞ { piano: 200, tv: 300 }
  * convertToNumber({ piano: "200", tv: "300", stereo: "400" }) ➞ { piano: 200, tv: 300, stereo: 400 }
  */
+function convertToNumber(input) {
+	console.log(Object.values(input));
+	
+	// var newObj = []
+	// for (let i = 0; i < input.length; i++) {
+	// 	newObj.push(parseInt(Object.values(input[i])));
+	// }
+	// console.log(newObj)
+	// Object.entries coverts object argument to an array
+	// var inputObj = Object.entries(input)
+	// console.log(inputObj)
+	// var newObj = [];
+	// for (let i = 0; i < input.length; i++) {
+	// 	console.log(Object.values(input[i]));
+	//
+	// }
+	// console.log(newObj)
+}
 
+convertToNumber({ piano: "200" })
+convertToNumber({ piano: "200", tv: "300", stereo: "400" })
 
 /**
  * Frequency Distribution
