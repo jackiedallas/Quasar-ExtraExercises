@@ -13,9 +13,11 @@
 
 function minMax(array){
 	// used the .apply method to refer to numbers inside the array input
-	var min = Math.min.apply(null, array);
-	var max = Math.max.apply(null, array);
-	console.log(min + ', ' + max);
+	var minMaxArr = [];
+	minMaxArr.push(Math.min.apply(null, array));
+	minMaxArr.push(Math.max.apply(null, array));
+	// console.log(minMaxArr)
+	return minMaxArr;
 }
 minMax([37, 3, 56, 4, 754, 92, 29])
 minMax([1, 2, 3, 4, 5])
@@ -48,7 +50,8 @@ function filterArray(input) {
 	}
 	var filteredArray = Array.from(result);
 	// Array.from converts the set back to an array
-	console.log(filteredArray);
+	// console.log(filteredArray);
+	return filteredArray;
 }
 filterArray(['dog', 2, 'toy', 1, 45])
 filterArray([1, 2, "aasf", "1", "123", 123, 0, 1])
@@ -72,7 +75,9 @@ function isAvgWhole(input){
 			sum += input[i];
 		}
 		var average = sum / input.length;
-		console.log(Number.isInteger(average));
+		// console.log(Number.isInteger(average));
+		return Number.isInteger(average);
+		
 	}
 }
 isAvgWhole([1, 2, 3, 4])
@@ -107,7 +112,8 @@ function sortDrinkByPrice(input) {
 			return a.price - b.price
 		});
 		// var sorted = input.sort((a, b) => (a.price > b.price) ? 1 : -1);
-		console.log(sorted)
+		// console.log(sorted)
+		return sorted;
 	}
 }
 sortDrinkByPrice(drinks);
@@ -184,8 +190,8 @@ function maximumScore(input) {
 	}
 }
 
-console.log(maximumScore(hand));
-console.log(maximumScore(hand2));
+// console.log(maximumScore(hand));
+// console.log(maximumScore(hand2));
 /**
  * Converting Objects to Arrays
  * Write a function named toArray that converts an object into an array, where each element represents a key-value pair in the form of an array.
@@ -206,9 +212,9 @@ function toArray(object) {
 	// console.log(objArray);
 }
 
-console.log(toArray({a: 1, b: 2}));
-console.log(toArray({}));
-console.log(toArray({shrimp: 15, tots: 12}));
+// console.log(toArray({a: 1, b: 2}));
+// console.log(toArray({}));
+// console.log(toArray({shrimp: 15, tots: 12}));
 
 /**
  * Array of Multiples
@@ -233,7 +239,8 @@ function arrayOfMultiples(num, length) {
 	// while(i <= length) {
 	// 	array.push(i += num);
 	// }
-	console.log(array);
+	// console.log(array);
+	return array;
 	
 	// still figuring out how to push multiples to the array
 	// console.log(array);
@@ -276,9 +283,10 @@ function getBudgets(array) {
 		totalBudget += array[i].budget;
 	}
 	console.log(totalBudget);
+	return totalBudget;
 }
-getBudgets(budget1);
-getBudgets(budget2);
+// getBudgets(budget1);
+// getBudgets(budget2);
 
 /**
  * Special Arrays
@@ -308,8 +316,8 @@ function isSpecialArray(array) {
 	return true;
 }
 
-console.log(isSpecialArray([2, 7, 4, 9, 6, 1, 6, 3]));
-console.log(isSpecialArray([2, 7, 9, 1, 6, 1, 6, 3]));
+// console.log(isSpecialArray([2, 7, 4, 9, 6, 1, 6, 3]));
+// console.log(isSpecialArray([2, 7, 9, 1, 6, 1, 6, 3]));
 
 /**
  * Remove Duplicates from an Array
@@ -337,9 +345,9 @@ function removeDuplicates(array) {
 	// return newArray;
 }
 
-console.log(removeDuplicates([1, 0, 1, 0]));
-console.log(removeDuplicates(["The", "big", "cat"]));
-console.log(removeDuplicates(["John", "Taylor", "John"]));
+// console.log(removeDuplicates([1, 0, 1, 0]));
+// console.log(removeDuplicates(["The", "big", "cat"]));
+// console.log(removeDuplicates(["John", "Taylor", "John"]));
 
 /**
  * Lowercase and Uppercase Map
@@ -363,7 +371,7 @@ function mapping(array) {
 			})
 		
 	}
-	console.log(newArray);
+	// console.log(newArray);
 	// return array.map(element.toUpperCase);
 	
 	//--While loop attempt below
@@ -381,9 +389,9 @@ function mapping(array) {
 	// })
 }
 
-mapping(["p", "s"]);
+// mapping(["p", "s"]);
 
-mapping(["a", "b", "c"]);
+// mapping(["a", "b", "c"]);
 /**
  * Can You Spare a Square?
  * Try to imagine a world in which you might have to stay home for 14 days at any given time. Do you have enough TP to make it through?
@@ -462,7 +470,33 @@ mapping(["a", "b", "c"]);
  * >> convertAddressToObject('8626 Sunny Oaks') ➞ {streetNumber: '8646', streetName: 'Sunny Oaks'}
  * >> convertAddressToObject('5408 Villa Nueva') ➞ {streetNumber: '5408', streetName: 'Villa Nueva'}
  */
-
+function convertAddressToObject(string) {
+	result = {};
+	var streetNum = [];
+	var streetName = [];
+	var strArr = string.split(' ');
+	
+	
+	for (let i = 0; i < strArr.length; i++) {
+		if (!isNaN(strArr[i])) {
+			streetNum.push(strArr[i]);
+		} else {
+			streetName.push(strArr[i]);
+		}
+	}
+	
+	var newStreetNum = streetNum.join('')
+	var newStreetName = streetName.join(' ');
+	
+	
+	result.streetNumber = newStreetNum;
+	result.streetName = newStreetName;
+	console.log(result)
+	return result;
+	
+}
+convertAddressToObject('5408 Villa Nueva')
+convertAddressToObject('8626 Sunny Oaks')
 
 /**
  * Count total pets
@@ -476,3 +510,201 @@ mapping(["a", "b", "c"]);
  *       {name: 'Kenneth Howell', pets: 2}
  *    ]) ➞ 11
  */
+
+function totalPets(array) {
+	sumPets = 0;
+	for (let i = 0; i < array.length; i++) {
+		sumPets += array[i].pets;
+	}
+	console.log(sumPets)
+	return sumPets;
+}
+// totalPets([
+// 	{name: 'Fernando Mendoza', pets: 1},
+// 	{name: 'Douglas Hirsh', pets: 8},
+// 	{name: 'Kenneth Howell', pets: 2}
+// ])
+
+// Hash Plus Count
+function hashPlusCount(string) {
+	if(typeof string !== 'string'){
+		return false;
+	}
+	var strArr = string.split('');
+	var hashArr = [];
+	var plusArr = [];
+	for (var i = 0; i < strArr.length; i++) {
+		if(strArr[i] === '#') {
+			hashArr.push(strArr[i]);
+		} else if (strArr[i] === '+') {
+			plusArr.push(strArr[i]);
+		}
+	}
+	return [hashArr.length, plusArr.length];
+}
+
+
+
+
+// Record Temps
+function recordTemps(array1, array2) {
+	function minMax(array){
+		// used the .apply method to refer to numbers inside the array input
+		var result = [];
+		var min = Math.min.apply(null, array);
+		var max = Math.max.apply(null, array);
+		result.push(min, max);
+		return result;
+	}
+	
+	var result = [];
+	// created an empty array for each day of the week
+	var sun = [];
+	var mon = [];
+	var tues = [];
+	var wed = [];
+	var thur = [];
+	var fri = [];
+	var sat = [];
+	
+	// push values into respective day of the week arrays
+	sun.push(array1[0], array2[0]);
+	mon.push(array1[1], array2[1]);
+	tues.push(array1[2], array2[2]);
+	wed.push(array1[3], array2[3]);
+	thur.push(array1[4], array2[4]);
+	fri.push(array1[5], array2[5]);
+	sat.push(array1[6], array2[6]);
+	
+	// join and split into a single array and take min and max of each
+	var tempSun = sun.join(',').split(',');
+	result.push(minMax(tempSun));
+	
+	var tempMon = mon.join(',').split(',');
+	result.push(minMax(tempMon));
+	
+	var tempTues = tues.join(',').split(',');
+	result.push(minMax(tempTues));
+	
+	var tempWed = wed.join(',').split(',');
+	result.push(minMax(tempWed));
+	
+	var tempThur = thur.join(',').split(',');
+	result.push(minMax(tempThur));
+	
+	var tempFri = fri.join(',').split(',');
+	result.push(minMax(tempFri));
+	
+	var tempSat = sat.join(',').split(',');
+	result.push(minMax(tempSat));
+	
+	// return result;
+	// console.log(result);
+	return result
+}
+
+// Make Temp
+function makeTitle(string) {
+	var stringArr = string.split(' ')
+	for (var i = 0; i < stringArr.length; i++) {
+		// slicing at the 1 index and capitalizing at the 0 index then concat them back together
+		stringArr[i] = stringArr[i].charAt(0).toUpperCase() + stringArr[i].slice(1);
+	}
+	// joining array back as a string with a space separator
+	var newString = stringArr.join(" ")
+	console.log(newString)
+	return newString;
+}
+
+// Free Shipping
+function freeShipping(input){
+	var values = Object.values(input);
+	// console.log(totals);
+	var totals = 0;
+	for (var i = 0; i < values.length; i++) {
+		totals += values[i];
+	}
+	// console.log(totals);
+	if(totals > 50) {
+		console.log("Free Shipping")
+		return true;
+	} else {
+		console.log("No Free Shipping");
+		return false;
+	}
+}
+
+// Unique Sort
+function uniqueSort(array) {
+	// create a set so that it can remove duplicate elements
+	var result = new Set()
+	var sortedArray = array.sort();
+	for (var i = 0; i < sortedArray.length; i++) {
+		result.add(parseFloat(sortedArray[i]));
+	}
+	uniqueArray = Array.from(result)
+	console.log(uniqueArray)
+	return uniqueArray
+}
+
+// Jazzify
+function jazzify(array) {
+	// create for loop that adds 7 to every chord
+	result = [];
+	for (var i = 0; i < array.length; i++) {
+		if(array[i].includes('7')){
+			result.push(array[i])
+		} else {
+			result.push(array[i] + '7');
+		}
+	}
+	console.log(result)
+	return result;
+}
+
+// Index Shuffle
+function indexShuffle(string) {
+	result = [];
+	var stringArray = string.split('');
+	var evenCh =[];
+	var oddCh = [];
+	for (var i = 0; i < stringArray.length; i++) {
+		if(i % 2 === 0){
+			evenCh.push(stringArray[i]);
+		} else if(i % 2 !== 0){
+			oddCh.push(stringArray[i]);
+		}
+	}
+	result.push(evenCh.join(''));
+	result.push(oddCh.join(''));
+	result.join("");
+	
+	var newResult = result.join('')
+	console.log(newResult);
+	return newResult
+}
+
+// Amplify
+function amplify(num) {
+	var numArray = [];
+	for (var i = 0; i <= num; i++) {
+		numArray.push(i);
+	}
+	var ampedArray = [];
+	// numArray.forEach(function (number) {
+	// 	if (number % 4 !== 0){
+	// 		ampedArray.push(numArray[number])
+	// 	} else if (number % 4 === 0){
+	// 		ampedArray.push(numArray[number] * 10)
+	// 	}
+	// })
+	for (var j = 1; j < numArray.length ; j++) {
+		// var ampedArray = [];
+		if(numArray[j] % 4 === 0){
+			ampedArray.push(numArray[j] * 10)
+		} else {
+			ampedArray.push(numArray[j])
+		}
+	}
+	return ampedArray;
+}

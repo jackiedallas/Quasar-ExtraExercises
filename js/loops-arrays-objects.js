@@ -34,7 +34,8 @@ function hashPlusCount(string) {
 	return [hashArr.length, plusArr.length];
 }
 
-// console.log(hashPlusCount("#+++#+#++#"));
+console.log(hashPlusCount(""));
+console.log(hashPlusCount("#+++#+#++#"));
 
 /**
  * Amplify the Multiples of Four
@@ -184,6 +185,7 @@ function recordTemps(array1, array2) {
 	
 	// return result;
 	console.log(result);
+	return result
 }
 
 // recordTemps([[34, 82], [24, 82], [20, 89],  [5, 88],  [9, 88], [26, 89], [27, 83]],
@@ -224,6 +226,7 @@ function indexShuffle(string) {
 	
 	var newResult = result.join('')
 	console.log(newResult);
+	return newResult
 }
 
 // indexShuffle("abcdefg")
@@ -255,6 +258,7 @@ function jazzify(array) {
 		}
 	}
 	console.log(result)
+	return result;
 }
 // jazzify(["G7", "F", "C"])
 // jazzify(["F7", "E7", "A7", "Ab7", "Gm7", "C7"])
@@ -283,9 +287,10 @@ function uniqueSort(array) {
 	}
 	uniqueArray = Array.from(result)
 	console.log(uniqueArray)
+	return uniqueArray
 }
-// uniqueSort([1, 4, 4, 4, 4, 4, 3, 2, 1, 2])
-// uniqueSort([6, 7, 3, 2, 1])
+uniqueSort([1, 4, 4, 4, 4, 4, 3, 2, 1, 2])
+uniqueSort([6, 7, 3, 2, 1])
 
 /**
  * Capitalize the First Letter of Each Word
@@ -311,6 +316,7 @@ function makeTitle(string) {
 	// joining array back as a string with a space separator
 	var newString = stringArr.join(" ")
 	console.log(newString)
+	return newString;
 }
 // makeTitle("This is a title");
 // makeTitle("Create a function named freeShipping that determines whether a shopping order is eligible for free shipping.");
@@ -339,8 +345,10 @@ function freeShipping(input){
 	// console.log(totals);
 	if(totals > 50) {
 		console.log("Free Shipping")
+		return true;
 	} else {
 		console.log("No Free Shipping");
+		return false;
 	}
 }
 
