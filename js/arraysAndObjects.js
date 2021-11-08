@@ -39,22 +39,19 @@ minMax([1, 2, 3, 4, 5])
  */
 function filterArray(input) {
 	var result = new Set();
-	//new Set() is a new function, was able to store the array without duplicating any numbers.
 	if (Array.isArray(input)){
-		input.forEach(function (element) {
-			if(!isNaN(element) && typeof element !== 'string'){
+		input.forEach(element => {
+			if (!isNaN(element) && typeof element !== 'string') {
 				result.add(element);
-				// result.add is the method used to add values to the Set
 			}
 		})
 	}
-	var filteredArray = Array.from(result);
-	// Array.from converts the set back to an array
-	// console.log(filteredArray);
-	return filteredArray;
+	return Array.from(result);
 }
-filterArray(['dog', 2, 'toy', 1, 45])
-filterArray([1, 2, "aasf", "1", "123", 123, 0, 1])
+
+console.log(filterArray(['dog', 2, 'toy', 1, 45]));
+console.log(filterArray([1, 2, "aasf", "1", "123", 123, 0, 1]));
+
 /**
  * Is the Average of All Elements a Whole Number?
  * Create a function named isAvgWhole that takes an array as an argument and returns true or false depending on whether the average of all elements in the array is a whole number or not.
@@ -70,17 +67,13 @@ filterArray([1, 2, "aasf", "1", "123", 123, 0, 1])
 function isAvgWhole(input){
 	if(Array.isArray(input)){
 		var sum = 0;
-		for (let i = 0; i < input.length; i++) {
-			// this is how you add a number back into a variable.
-			sum += input[i];
-		}
+		input.forEach(element => {sum += element})
 		var average = sum / input.length;
-		// console.log(Number.isInteger(average));
 		return Number.isInteger(average);
-		
 	}
 }
-isAvgWhole([1, 2, 3, 4])
+
+console.log(isAvgWhole([1, 2, 3, 4]));
 isAvgWhole([1, 5, 6])
 /**
  * Drink Sorting
@@ -495,8 +488,8 @@ function convertAddressToObject(string) {
 	return result;
 	
 }
-convertAddressToObject('5408 Villa Nueva')
-convertAddressToObject('8626 Sunny Oaks')
+// convertAddressToObject('5408 Villa Nueva')
+// convertAddressToObject('8626 Sunny Oaks')
 
 /**
  * Count total pets
