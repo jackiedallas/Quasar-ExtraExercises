@@ -101,12 +101,11 @@ function sortDrinkByPrice(input) {
 		// 	{name: "lemonade", price: 50},
 		// 	{name: "lime", price: 10}
 		// ]
-		var sorted = input.sort(function (a, b) {
-			return a.price - b.price
-		});
 		// var sorted = input.sort((a, b) => (a.price > b.price) ? 1 : -1);
 		// console.log(sorted)
-		return sorted;
+		return input.sort(function (a, b) {
+			return a.price - b.price
+		});
 	}
 }
 sortDrinkByPrice(drinks);
@@ -404,6 +403,10 @@ function mapping(array) {
  * >> tpChecker({ people: 3, tp: 20 }) ➞ "Your TP will last 58 days, no need to panic!"
  * >> tpChecker({ people: 4, tp: 12 }) ➞ "Your TP will last 26 days, no need to panic!"
  */
+
+function tpChecker(object) {
+
+}
 
 
 /**
